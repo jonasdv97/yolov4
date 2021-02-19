@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a8a6901-18ba-4e1a-bfbd-24b09ef33cb4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ohG9bicZiBatElt79nBZg6ZzXQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/weights" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.47816092" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jodv\Desktop\pytorch-YOLOv4\data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jodv\Desktop\pytorch-YOLOv4\weights" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a8a6901-18ba-4e1a-bfbd-24b09ef33cb4" name="Default Changelist" comment="" />
+      <created>1613731258342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613731258342</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="753" y="343" key="FileChooserDialogImpl" timestamp="1613731296547">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="753" y="343" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1613731296547" />
+    <state x="454" y="163" key="SettingsEditor" timestamp="1613731311331">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="454" y="163" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1613731311331" />
+  </component>
+</project>
