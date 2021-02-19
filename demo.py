@@ -17,14 +17,15 @@
 from tool.utils import *
 from tool.torch_utils import *
 from tool.darknet2pytorch import Darknet
+from tool.data_import_azureML import dataset_to_cluster
 import argparse
 
 
 
 def detect_cv2(cfgfile, weightfile, imgfile):
     import cv2
+    print('darknet compile')
     m = Darknet(cfgfile)
-
     m.print_network()
     m.load_weights(weightfile)
     print('Loading weights from %s... Done!' % (weightfile))
@@ -42,7 +43,9 @@ def detect_cv2(cfgfile, weightfile, imgfile):
     class_names = load_class_names(namesfile)
 
     img = cv2.imread(imgfile)
+    print('image found')
     sized = cv2.resize(img, (m.width, m.height))
+    print('image resized')
     sized = cv2.cvtColor(sized, cv2.COLOR_BGR2RGB)
 
     for i in range(2):
@@ -139,12 +142,14 @@ def get_args():
     parser.add_argument('-cfgfile', type=str, default='./cfg/yolov4.cfg',
                         help='path of cfg file', dest='cfgfile')
     parser.add_argument('-weightfile', type=str,
-                        default='./weights/yolov4.weights',
+                        default='./yolo/yolov4.weights',
                         help='path of trained model.', dest='weightfile')
     parser.add_argument('-imgfile', type=str,
-                        default='./data/test.jpg',
+                        default='images/00001.jpg',
                         help='path of your image file.', dest='imgfile')
     parser.add_argument('-gpu',type=bool,default=False, help= 'define usage of gpu or cpu')
+    parser.add_argument('-cloud',type=bool,default=True, help= 'run in cloud or not')
+    
     args = parser.parse_args()
 
     return args
@@ -156,8 +161,16 @@ if __name__ == '__main__':
         use_cuda = False
     else:
         use_cuda = True
+    if args.cloud ==True:
+        stream_model_path = dataset_to_cluster('models')
+        stream_image_path = dataset_to_cluster('kangaroodataset')
+        weight_loc = os.path.join(stream_model_path,args.weightfile)
+        pic_loc = os.path.join(stream_image_path,args.imgfile)
+    else:
+        weight_loc = args.weightfile
+        pic_loc = args.imgfile
     if args.imgfile:
-        detect_cv2(args.cfgfile, args.weightfile, args.imgfile)
+        detect_cv2(args.cfgfile, weight_loc, pic_loc)
         # detect_imges(args.cfgfile, args.weightfile)
         # detect_cv2(args.cfgfile, args.weightfile, args.imgfile)
         # detect_skimage(args.cfgfile, args.weightfile, args.imgfile)
